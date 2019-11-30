@@ -17,5 +17,6 @@ namespace BeautySalon.Models
         public string FamilyName { get; set; }
         public bool IsActive { get; set; }
         public bool IsAdmin { get; set; }
+
     }
 }

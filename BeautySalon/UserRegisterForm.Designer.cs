@@ -1,4 +1,4 @@
-﻿namespace BeautySalon.Admin
+﻿namespace BeautySalon
 {
     partial class UserRegisterForm
     {
@@ -140,7 +140,7 @@
             this.exitButton.TabIndex = 9;
             this.exitButton.Text = "&خروج";
             this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // UserRegisterForm
             // 

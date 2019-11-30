@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new Hsh.Windows.Forms.TextBox();
+            this.passwordTextBox = new Hsh.Windows.Forms.TextBox();
             this.passwordLabel = new Hsh.Windows.Forms.Label();
             this.usernameLabel = new Hsh.Windows.Forms.Label();
-            this.textBox1 = new Hsh.Windows.Forms.TextBox();
+            this.usernameTextBox = new Hsh.Windows.Forms.TextBox();
             this.exitButton = new Hsh.Windows.Forms.Button();
             this.registerButton = new Hsh.Windows.Forms.Button();
             this.resetButton = new Hsh.Windows.Forms.Button();
             this.loginButton = new Hsh.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(11, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 20);
-            this.textBox2.TabIndex = 7;
+            this.passwordTextBox.Location = new System.Drawing.Point(11, 38);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(319, 20);
+            this.passwordTextBox.TabIndex = 7;
             // 
             // passwordLabel
             // 
@@ -67,14 +67,14 @@
             this.usernameLabel.TabIndex = 5;
             this.usernameLabel.Text = "نام کاربری : ";
             // 
-            // textBox1
+            // usernameTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 20);
-            this.textBox1.TabIndex = 4;
+            this.usernameTextBox.Location = new System.Drawing.Point(12, 12);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(318, 20);
+            this.usernameTextBox.TabIndex = 4;
             // 
             // exitButton
             // 
@@ -85,6 +85,7 @@
             this.exitButton.TabIndex = 13;
             this.exitButton.Text = "&خروج";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // registerButton
             // 
@@ -95,6 +96,7 @@
             this.registerButton.TabIndex = 12;
             this.registerButton.Text = "&ثبت نام";
             this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // resetButton
             // 
@@ -106,6 +108,7 @@
             this.resetButton.TabIndex = 11;
             this.resetButton.Text = "&انصراف";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // loginButton
             // 
@@ -116,6 +119,7 @@
             this.loginButton.TabIndex = 10;
             this.loginButton.Text = "&ورود";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // UserLoginForm
             // 
@@ -126,10 +130,10 @@
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.usernameTextBox);
             this.MaximumSize = new System.Drawing.Size(650, 155);
             this.MinimumSize = new System.Drawing.Size(443, 155);
             this.Name = "UserLoginForm";
@@ -140,14 +144,13 @@
         }
 
         #endregion
-
-        private Hsh.Windows.Forms.TextBox textBox2;
         private Hsh.Windows.Forms.Label passwordLabel;
         private Hsh.Windows.Forms.Label usernameLabel;
-        private Hsh.Windows.Forms.TextBox textBox1;
         private Hsh.Windows.Forms.Button exitButton;
         private Hsh.Windows.Forms.Button registerButton;
         private Hsh.Windows.Forms.Button resetButton;
         private Hsh.Windows.Forms.Button loginButton;
+        public Hsh.Windows.Forms.TextBox passwordTextBox;
+        public Hsh.Windows.Forms.TextBox usernameTextBox;
     }
 }

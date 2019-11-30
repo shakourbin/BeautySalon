@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BeautySalon.Admin
+namespace BeautySalon
 {
-    public partial class UserRegisterForm : Infrastructure.BaseForm
+    public partial class UserRegisterForm :Infrastructure.BaseForm
     {
         public UserRegisterForm()
         {
@@ -31,7 +31,7 @@ namespace BeautySalon.Admin
         }
 
         // دستور ریست شدن فرم ثبت نام 
-        public void ResetForm ()
+        private void ResetForm ()
         {
             usernameTextBox.Text = string.Empty;
             passwordTextBox.Text = string.Empty;
@@ -111,19 +111,9 @@ namespace BeautySalon.Admin
         }
 
         //خروج از برنامه در صورت کلیک بر روی کلید خروج
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = System.Windows.Forms.MessageBox.Show(
-                text : " آیا به خروج از برنامه اطمینان دارید؟ ",
-                caption: " سوال ",
-                buttons: MessageBoxButtons.YesNo,
-                defaultButton: MessageBoxDefaultButton.Button2,
-                icon: MessageBoxIcon.Question
-                );
-            if (result == DialogResult.Yes)
-            {
-                System.Windows.Forms.Application.Exit();
-            }
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

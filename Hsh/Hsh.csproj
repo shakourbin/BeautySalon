@@ -72,8 +72,11 @@
     <Compile Include="Windows\Forms\Label.Designer.cs">
       <DependentUpon>Label.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Forms\TestUsserControl.xaml.cs">
-      <DependentUpon>TestUsserControl.xaml</DependentUpon>
+    <Compile Include="Windows\Forms\MenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MenuStrip.Designer.cs">
+      <DependentUpon>MenuStrip.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Forms\TextBox.cs">
       <SubType>Component</SubType>
@@ -86,12 +89,6 @@
     <EmbeddedResource Include="Windows\Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Windows\Forms\TestUsserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

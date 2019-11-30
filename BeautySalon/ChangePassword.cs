@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BeautySalon
 {
-    public partial class Form1 : Form
+    public partial class ChangePassword : Infrastructure.BaseForm
     {
-        public Form1()
+        public ChangePassword()
         {
             InitializeComponent();
         }

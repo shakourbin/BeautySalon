@@ -13,6 +13,8 @@ namespace BeautySalon.Infrastructure
         {
         }
 
+        public static Models.User AuthenticatedUser { get; set; }
+
         private static BeautySalon.UserLoginForm userLoginForm;
         public static BeautySalon.UserLoginForm UserLoginForm
         {
@@ -25,5 +27,45 @@ namespace BeautySalon.Infrastructure
                 return userLoginForm;
             }
         }
+
+        private static BeautySalon.UserRegisterForm userRegisterForm;
+        public static BeautySalon.UserRegisterForm UserRegisterForm
+        {
+            get
+            {
+                if (userRegisterForm == null)
+                {
+                    userRegisterForm = new BeautySalon.UserRegisterForm();
+                }
+                return userRegisterForm;
+            }
+        }
+
+        private static BeautySalon.MainForm mainForm;
+        public static BeautySalon.MainForm MainForm
+        {
+            get
+            {
+                if (mainForm == null)
+                {
+                    mainForm = new BeautySalon.MainForm();
+                }
+                return mainForm;
+            }
+        }
+
+        private static BeautySalon.ChangePassword changePassword;
+        public static BeautySalon.ChangePassword ChangePassword
+        {
+            get
+            {
+                if (changePassword == null)
+                {
+                    changePassword = new BeautySalon.ChangePassword();
+                }
+                return changePassword;
+            }
+        }
+
     }
 }
