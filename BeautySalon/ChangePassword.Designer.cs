@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userFamilyNameTextBox = new Hsh.Windows.Forms.TextBox();
+            this.passwordConfirmTextBox = new Hsh.Windows.Forms.TextBox();
             this.userFamilyNameLabel = new Hsh.Windows.Forms.Label();
-            this.passwordTextBox = new Hsh.Windows.Forms.TextBox();
+            this.newPasswordTextBox = new Hsh.Windows.Forms.TextBox();
             this.passwordLabel = new Hsh.Windows.Forms.Label();
             this.usernameLabel = new Hsh.Windows.Forms.Label();
-            this.usernameTextBox = new Hsh.Windows.Forms.TextBox();
+            this.oldPasswordTextBox = new Hsh.Windows.Forms.TextBox();
             this.saveButton = new Hsh.Windows.Forms.Button();
-            this.canceleButton = new Hsh.Windows.Forms.Button();
+            this.resetButton = new Hsh.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // userFamilyNameTextBox
+            // passwordConfirmTextBox
             // 
-            this.userFamilyNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passwordConfirmTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userFamilyNameTextBox.Location = new System.Drawing.Point(11, 70);
-            this.userFamilyNameTextBox.Name = "userFamilyNameTextBox";
-            this.userFamilyNameTextBox.Size = new System.Drawing.Size(306, 20);
-            this.userFamilyNameTextBox.TabIndex = 11;
+            this.passwordConfirmTextBox.Location = new System.Drawing.Point(11, 70);
+            this.passwordConfirmTextBox.Name = "passwordConfirmTextBox";
+            this.passwordConfirmTextBox.Size = new System.Drawing.Size(306, 20);
+            this.passwordConfirmTextBox.TabIndex = 11;
             // 
             // userFamilyNameLabel
             // 
@@ -57,14 +57,14 @@
             this.userFamilyNameLabel.TabIndex = 10;
             this.userFamilyNameLabel.Text = "تکرار رمز عبور جدید :";
             // 
-            // passwordTextBox
+            // newPasswordTextBox
             // 
-            this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.newPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTextBox.Location = new System.Drawing.Point(11, 44);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(306, 20);
-            this.passwordTextBox.TabIndex = 9;
+            this.newPasswordTextBox.Location = new System.Drawing.Point(11, 44);
+            this.newPasswordTextBox.Name = "newPasswordTextBox";
+            this.newPasswordTextBox.Size = new System.Drawing.Size(306, 20);
+            this.newPasswordTextBox.TabIndex = 9;
             // 
             // passwordLabel
             // 
@@ -86,14 +86,14 @@
             this.usernameLabel.TabIndex = 7;
             this.usernameLabel.Text = "رمز عبور قبلی :";
             // 
-            // usernameTextBox
+            // oldPasswordTextBox
             // 
-            this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.oldPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.usernameTextBox.Location = new System.Drawing.Point(12, 18);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(305, 20);
-            this.usernameTextBox.TabIndex = 6;
+            this.oldPasswordTextBox.Location = new System.Drawing.Point(12, 18);
+            this.oldPasswordTextBox.Name = "oldPasswordTextBox";
+            this.oldPasswordTextBox.Size = new System.Drawing.Size(305, 20);
+            this.oldPasswordTextBox.TabIndex = 6;
             // 
             // saveButton
             // 
@@ -104,29 +104,31 @@
             this.saveButton.TabIndex = 12;
             this.saveButton.Text = "ثبت";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // canceleButton
+            // resetButton
             // 
-            this.canceleButton.Location = new System.Drawing.Point(12, 112);
-            this.canceleButton.Name = "canceleButton";
-            this.canceleButton.Size = new System.Drawing.Size(75, 23);
-            this.canceleButton.TabIndex = 13;
-            this.canceleButton.Text = "انصراف";
-            this.canceleButton.UseVisualStyleBackColor = true;
+            this.resetButton.Location = new System.Drawing.Point(12, 112);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 13;
+            this.resetButton.Text = "انصراف";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 147);
-            this.Controls.Add(this.canceleButton);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.userFamilyNameTextBox);
+            this.Controls.Add(this.passwordConfirmTextBox);
             this.Controls.Add(this.userFamilyNameLabel);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.newPasswordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.oldPasswordTextBox);
             this.MaximumSize = new System.Drawing.Size(650, 186);
             this.MinimumSize = new System.Drawing.Size(443, 186);
             this.Name = "ChangePassword";
@@ -138,13 +140,13 @@
 
         #endregion
 
-        public Hsh.Windows.Forms.TextBox userFamilyNameTextBox;
+        public Hsh.Windows.Forms.TextBox passwordConfirmTextBox;
         private Hsh.Windows.Forms.Label userFamilyNameLabel;
-        public Hsh.Windows.Forms.TextBox passwordTextBox;
+        public Hsh.Windows.Forms.TextBox newPasswordTextBox;
         private Hsh.Windows.Forms.Label passwordLabel;
         private Hsh.Windows.Forms.Label usernameLabel;
-        public Hsh.Windows.Forms.TextBox usernameTextBox;
+        public Hsh.Windows.Forms.TextBox oldPasswordTextBox;
         private Hsh.Windows.Forms.Button saveButton;
-        private Hsh.Windows.Forms.Button canceleButton;
+        private Hsh.Windows.Forms.Button resetButton;
     }
 }

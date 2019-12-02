@@ -137,7 +137,7 @@
             this.MaximumSize = new System.Drawing.Size(650, 155);
             this.MinimumSize = new System.Drawing.Size(443, 155);
             this.Name = "UserLoginForm";
-            this.Text = "UserLoginForm";
+            this.Text = "ورود به سیستم";
             this.ResumeLayout(false);
             this.PerformLayout();
 

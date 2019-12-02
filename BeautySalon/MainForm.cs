@@ -17,24 +17,20 @@ namespace BeautySalon
             InitializeComponent();
         }
 
-        // خروج از برنامه
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(
-                icon: MessageBoxIcon.Question,
-                caption: "سوال ؟ ",
-                buttons: MessageBoxButtons.YesNo,
-                defaultButton: MessageBoxDefaultButton.Button2,
-                text: " آیا به خروج از برنامه اطمینان دارید ؟ "
-                );
+        private ChangePassword changePassword;
 
-            if (dialogResult == DialogResult.Yes)
+        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((changePassword == null) || (changePassword.IsDisposed))
             {
-                System.Windows.Forms.Application.Exit();
+                changePassword = new ChangePassword()
+                {
+                   MdiParent = this,
+                };
+                changePassword.Show();
             }
         }
 
-        //خروج از اکانت کاربری
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(
@@ -53,17 +49,19 @@ namespace BeautySalon
             }
         }
 
-        private ChangePassword changePassword;
-
-        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((changePassword.IsDisposed)||(changePassword == null))
+            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(
+                icon: MessageBoxIcon.Question,
+                caption: "سوال ؟ ",
+                buttons: MessageBoxButtons.YesNo,
+                defaultButton: MessageBoxDefaultButton.Button2,
+                text: " آیا به خروج از برنامه اطمینان دارید ؟ "
+                );
+
+            if (dialogResult == DialogResult.Yes)
             {
-                changePassword = new ChangePassword()
-                {
-                    MdiParent = this,
-                };
-                changePassword.Show();
+                System.Windows.Forms.Application.Exit();
             }
         }
     }

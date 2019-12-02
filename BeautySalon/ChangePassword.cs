@@ -16,5 +16,52 @@ namespace BeautySalon
         {
             InitializeComponent();
         }
+
+        //دستور انصراف
+        public void ResetForm()
+        {
+            oldPasswordTextBox.Text = string.Empty;
+            newPasswordTextBox.Text = string.Empty;
+            passwordConfirmTextBox.Text = string.Empty;
+
+            oldPasswordTextBox.Focus();
+        }
+
+        // کلیک بر روی دکمه ی انصراف و پاک کردن فرم 
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            Models.DatabaseContext databaseContext = null;
+
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+                Models.User currentUser = databaseContext.Users
+                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                    .FirstOrDefault();
+
+                if (currentUser == null)
+                {
+                    System.Windows.Forms.Application.Exit();
+                }
+
+                if (string.Compare(currentUser.Password , oldPasswordTextBox.Text , ignoreCase: false) !=0 )
+                {
+
+                }
+                    
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
     }
 }

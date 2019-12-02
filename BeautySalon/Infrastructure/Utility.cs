@@ -61,7 +61,7 @@ namespace BeautySalon.Infrastructure
             {
                 if (changePassword == null)
                 {
-                    changePassword = new BeautySalon.ChangePassword();
+                    changePassword = new ChangePassword();
                 }
                 return changePassword;
             }
