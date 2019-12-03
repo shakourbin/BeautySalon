@@ -64,5 +64,10 @@ namespace BeautySalon
                 System.Windows.Forms.Application.Exit();
             }
         }
+
+        private void مدیریتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

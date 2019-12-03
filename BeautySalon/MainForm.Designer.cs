@@ -55,6 +55,7 @@
             this.مدیریتToolStripMenuItem.Name = "مدیریتToolStripMenuItem";
             this.مدیریتToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.مدیریتToolStripMenuItem.Text = "مدیریت";
+            this.مدیریتToolStripMenuItem.Click += new System.EventHandler(this.مدیریتToolStripMenuItem_Click);
             // 
             // بهروزرسانیپروفایلToolStripMenuItem
             // 

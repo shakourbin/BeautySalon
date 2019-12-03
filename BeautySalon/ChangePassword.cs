@@ -33,6 +33,7 @@ namespace BeautySalon
             ResetForm();
         }
 
+        // ذخیره ی پسوورد جدید 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             Models.DatabaseContext databaseContext = null;
@@ -49,19 +50,39 @@ namespace BeautySalon
                     System.Windows.Forms.Application.Exit();
                 }
 
-                if (string.Compare(currentUser.Password , oldPasswordTextBox.Text , ignoreCase: false) !=0 )
+                if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
                 {
-
+                    System.Windows.Forms.MessageBox.Show(" ! پسوورد قدیمی اشتباه می باشد  ");
+                    oldPasswordTextBox.Focus();
+                    return;
                 }
-                    
 
+                if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) == 0)
+                {
+                    if (string.Compare(newPasswordTextBox.Text, passwordConfirmTextBox.Text, ignoreCase: false) != 0)
+                    {
+                        System.Windows.Forms.MessageBox.Show(" تکرار رمز جدید صحیح نمی باشد ! ");
+                    }
+
+                    currentUser.Password = newPasswordTextBox.Text;
+                    databaseContext.SaveChanges();
+
+                    System.Windows.Forms.MessageBox.Show(" رمز شما با موفقیت تغییر یافت ! ");
+                    return;
+                }
             }
-            catch (Exception)
+            catch (System.Exception ex)
             {
-
-                throw;
+                System.Windows.Forms.MessageBox.Show($" Error : {ex.Message}");
             }
-
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                    databaseContext = null;
+                }
+            }
         }
     }
 }
