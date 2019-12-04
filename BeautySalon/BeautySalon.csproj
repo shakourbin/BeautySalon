@@ -72,7 +72,9 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="UserLoginForm.cs">
       <SubType>Form</SubType>
