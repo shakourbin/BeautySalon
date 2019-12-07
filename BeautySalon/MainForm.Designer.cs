@@ -30,19 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new Hsh.Windows.Forms.MenuStrip(this.components);
-            this.مدیریتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.بهروزرسانیپروفایلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateProfileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.مدیریتToolStripMenuItem,
+            this.adminToolStripMenuItem,
             this.بهروزرسانیپروفایلToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -50,12 +51,12 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // مدیریتToolStripMenuItem
+            // adminToolStripMenuItem
             // 
-            this.مدیریتToolStripMenuItem.Name = "مدیریتToolStripMenuItem";
-            this.مدیریتToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.مدیریتToolStripMenuItem.Text = "مدیریت";
-            this.مدیریتToolStripMenuItem.Click += new System.EventHandler(this.مدیریتToolStripMenuItem_Click);
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.adminToolStripMenuItem.Text = "مدیریت";
+            this.adminToolStripMenuItem.Visible = false;
             // 
             // بهروزرسانیپروفایلToolStripMenuItem
             // 
@@ -71,40 +72,50 @@
             // updateProfileToolStripMenuItem1
             // 
             this.updateProfileToolStripMenuItem1.Name = "updateProfileToolStripMenuItem1";
-            this.updateProfileToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.updateProfileToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
             this.updateProfileToolStripMenuItem1.Text = "به روز رسانی پروفایل";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.changePasswordToolStripMenuItem.Text = "تغییر رمز";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.ChangePasswordToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.logoutToolStripMenuItem.Text = "خروج از سیستم";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.exitToolStripMenuItem.Text = "خروج";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // mainStatusStrip
+            // 
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 297);
+            this.mainStatusStrip.Name = "mainStatusStrip";
+            this.mainStatusStrip.Size = new System.Drawing.Size(534, 22);
+            this.mainStatusStrip.TabIndex = 2;
+            this.mainStatusStrip.Text = "statusStrip1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 319);
+            this.Controls.Add(this.mainStatusStrip);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "خانه";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -115,12 +126,13 @@
         #endregion
 
         private Hsh.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem مدیریتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem بهروزرسانیپروفایلToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip mainStatusStrip;
     }
 }
 

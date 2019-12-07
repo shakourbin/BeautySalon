@@ -65,9 +65,20 @@ namespace BeautySalon
             }
         }
 
-        private void مدیریتToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
+            ResetForm();
+        }
 
+        public void ResetForm()
+        {
+            adminToolStripMenuItem.Visible =
+                Infrastructure.Utility.AuthenticatedUser.IsAdmin;
+
+            string userDisplayName = Infrastructure.Utility.AuthenticatedUser.FamilyName;
+
+            mainStatusStrip.Text = 
+                $" { userDisplayName } عزیز خوش آمدید! ";
         }
     }
 }

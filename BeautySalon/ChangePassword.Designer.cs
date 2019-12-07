@@ -42,16 +42,16 @@
             // 
             this.passwordConfirmTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordConfirmTextBox.Location = new System.Drawing.Point(11, 70);
+            this.passwordConfirmTextBox.Location = new System.Drawing.Point(118, 70);
             this.passwordConfirmTextBox.Name = "passwordConfirmTextBox";
-            this.passwordConfirmTextBox.Size = new System.Drawing.Size(306, 20);
+            this.passwordConfirmTextBox.Size = new System.Drawing.Size(297, 20);
             this.passwordConfirmTextBox.TabIndex = 11;
+            this.passwordConfirmTextBox.UseSystemPasswordChar = true;
             // 
             // userFamilyNameLabel
             // 
-            this.userFamilyNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userFamilyNameLabel.AutoSize = true;
-            this.userFamilyNameLabel.Location = new System.Drawing.Point(323, 73);
+            this.userFamilyNameLabel.Location = new System.Drawing.Point(9, 73);
             this.userFamilyNameLabel.Name = "userFamilyNameLabel";
             this.userFamilyNameLabel.Size = new System.Drawing.Size(104, 13);
             this.userFamilyNameLabel.TabIndex = 10;
@@ -61,16 +61,16 @@
             // 
             this.newPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.newPasswordTextBox.Location = new System.Drawing.Point(11, 44);
+            this.newPasswordTextBox.Location = new System.Drawing.Point(118, 44);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.Size = new System.Drawing.Size(306, 20);
+            this.newPasswordTextBox.Size = new System.Drawing.Size(297, 20);
             this.newPasswordTextBox.TabIndex = 9;
+            this.newPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // passwordLabel
             // 
-            this.passwordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(323, 47);
+            this.passwordLabel.Location = new System.Drawing.Point(9, 47);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(80, 13);
             this.passwordLabel.TabIndex = 8;
@@ -78,9 +78,8 @@
             // 
             // usernameLabel
             // 
-            this.usernameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(323, 21);
+            this.usernameLabel.Location = new System.Drawing.Point(9, 21);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(79, 13);
             this.usernameLabel.TabIndex = 7;
@@ -90,15 +89,14 @@
             // 
             this.oldPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.oldPasswordTextBox.Location = new System.Drawing.Point(12, 18);
+            this.oldPasswordTextBox.Location = new System.Drawing.Point(119, 18);
             this.oldPasswordTextBox.Name = "oldPasswordTextBox";
-            this.oldPasswordTextBox.Size = new System.Drawing.Size(305, 20);
+            this.oldPasswordTextBox.Size = new System.Drawing.Size(296, 20);
             this.oldPasswordTextBox.TabIndex = 6;
             // 
             // saveButton
             // 
-            this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveButton.Location = new System.Drawing.Point(242, 112);
+            this.saveButton.Location = new System.Drawing.Point(12, 112);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 12;
@@ -108,7 +106,7 @@
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(12, 112);
+            this.resetButton.Location = new System.Drawing.Point(93, 112);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(75, 23);
             this.resetButton.TabIndex = 13;

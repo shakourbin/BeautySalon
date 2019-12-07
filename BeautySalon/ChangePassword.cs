@@ -50,16 +50,21 @@ namespace BeautySalon
                     System.Windows.Forms.Application.Exit();
                 }
 
-                if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
+                if ((string.Compare(
+                    currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0) 
+                    && string.IsNullOrWhiteSpace(oldPasswordTextBox.Text))
                 {
                     System.Windows.Forms.MessageBox.Show(" ! پسوورد قدیمی اشتباه می باشد  ");
                     oldPasswordTextBox.Focus();
                     return;
                 }
 
-                if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) == 0)
+                if (string.Compare(
+                    currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) == 0)
                 {
-                    if (string.Compare(newPasswordTextBox.Text, passwordConfirmTextBox.Text, ignoreCase: false) != 0)
+                    if (string.Compare(
+                        newPasswordTextBox.Text, passwordConfirmTextBox.Text, ignoreCase: false) != 0
+                        && string.IsNullOrWhiteSpace(newPasswordTextBox.Text))
                     {
                         System.Windows.Forms.MessageBox.Show(" تکرار رمز جدید صحیح نمی باشد ! ");
                     }

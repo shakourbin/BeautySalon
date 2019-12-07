@@ -73,7 +73,7 @@ namespace BeautySalon
                     .Where(current => string.Compare(current.UserName, usernameTextBox.Text, true) == 0)
                     .FirstOrDefault();
 
-                if (databaseContext != null)
+                if (user != null)
                 {
                     System.Windows.Forms.MessageBox.Show("! کاربری با این نام موجود می باشد ");
                     usernameTextBox.Focus();
@@ -114,6 +114,11 @@ namespace BeautySalon
         private void ExitButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void UserRegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

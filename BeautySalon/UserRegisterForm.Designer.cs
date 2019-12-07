@@ -44,16 +44,15 @@
             // 
             this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.usernameTextBox.Location = new System.Drawing.Point(13, 21);
+            this.usernameTextBox.Location = new System.Drawing.Point(97, 21);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(318, 20);
             this.usernameTextBox.TabIndex = 0;
             // 
             // usernameLabel
             // 
-            this.usernameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(352, 27);
+            this.usernameLabel.Location = new System.Drawing.Point(21, 24);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(67, 13);
             this.usernameLabel.TabIndex = 1;
@@ -61,9 +60,8 @@
             // 
             // passwordLabel
             // 
-            this.passwordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(366, 50);
+            this.passwordLabel.Location = new System.Drawing.Point(35, 47);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(53, 13);
             this.passwordLabel.TabIndex = 2;
@@ -73,16 +71,15 @@
             // 
             this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTextBox.Location = new System.Drawing.Point(12, 47);
+            this.passwordTextBox.Location = new System.Drawing.Point(96, 47);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(319, 20);
             this.passwordTextBox.TabIndex = 3;
             // 
             // userFamilyNameLabel
             // 
-            this.userFamilyNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userFamilyNameLabel.AutoSize = true;
-            this.userFamilyNameLabel.Location = new System.Drawing.Point(344, 79);
+            this.userFamilyNameLabel.Location = new System.Drawing.Point(13, 76);
             this.userFamilyNameLabel.Name = "userFamilyNameLabel";
             this.userFamilyNameLabel.Size = new System.Drawing.Size(75, 13);
             this.userFamilyNameLabel.TabIndex = 4;
@@ -92,15 +89,14 @@
             // 
             this.userFamilyNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userFamilyNameTextBox.Location = new System.Drawing.Point(12, 73);
+            this.userFamilyNameTextBox.Location = new System.Drawing.Point(96, 73);
             this.userFamilyNameTextBox.Name = "userFamilyNameTextBox";
             this.userFamilyNameTextBox.Size = new System.Drawing.Size(319, 20);
             this.userFamilyNameTextBox.TabIndex = 5;
             // 
             // registerButton
             // 
-            this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.registerButton.Location = new System.Drawing.Point(256, 108);
+            this.registerButton.Location = new System.Drawing.Point(13, 108);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 6;
@@ -110,7 +106,6 @@
             // 
             // resetButton
             // 
-            this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.resetButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.resetButton.Location = new System.Drawing.Point(175, 108);
             this.resetButton.Name = "resetButton";
@@ -122,7 +117,6 @@
             // 
             // loginButton
             // 
-            this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.loginButton.Location = new System.Drawing.Point(94, 108);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
@@ -133,8 +127,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitButton.Location = new System.Drawing.Point(13, 108);
+            this.exitButton.Location = new System.Drawing.Point(256, 108);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 9;
@@ -163,6 +156,7 @@
             this.MinimumSize = new System.Drawing.Size(443, 186);
             this.Name = "UserRegisterForm";
             this.Text = "فرم ثبت نام کاربر";
+            this.Load += new System.EventHandler(this.UserRegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

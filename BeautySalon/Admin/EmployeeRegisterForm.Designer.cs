@@ -1,6 +1,6 @@
-﻿namespace Hsh.Windows.Forms
+﻿namespace BeautySalon.Admin
 {
-    partial class BaseForm
+    partial class EmployeeRegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // BaseForm
+            // EmployeeRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(424, 254);
-            this.Name = "BaseForm";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BaseForm";
+            this.ClientSize = new System.Drawing.Size(470, 202);
+            this.Name = "EmployeeRegisterForm";
+            this.Text = "فرم ثبت نام کارمند";
             this.ResumeLayout(false);
 
         }
