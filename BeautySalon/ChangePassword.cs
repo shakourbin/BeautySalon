@@ -36,6 +36,67 @@ namespace BeautySalon
         // ذخیره ی پسوورد جدید 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            string errorMessage = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(oldPasswordTextBox.Text))
+            {
+                errorMessage = " ! وارد کردن رمز عبور قدیمی الزامی می باشد ";
+            }
+
+            if (string.IsNullOrWhiteSpace(newPasswordTextBox.Text))
+            {
+                if (errorMessage != string.Empty)
+                {
+                    errorMessage += System.Environment.NewLine;
+                }
+
+                errorMessage += " ! وارد کردن رمز عبور جدید الزامی می باشد ";
+            }
+            else
+            {
+                if (newPasswordTextBox.Text.Length < 8)
+                {
+                    if (errorMessage != string.Empty)
+                    {
+                        errorMessage += System.Environment.NewLine;
+                    }
+
+                    errorMessage += " رمز عبور باید حداقل شامل 8 کاراکتر باشد ! ";
+                }
+            }
+
+            if (string.IsNullOrWhiteSpace(passwordConfirmTextBox.Text))
+            {
+                if (errorMessage != string.Empty)
+                {
+                    errorMessage += System.Environment.NewLine;
+                }
+
+                errorMessage += "   تکرار رمز عبور جدید الزامی است !";
+            }
+            else
+            {
+                if (string.Compare(
+                    passwordConfirmTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
+                {
+                    if (errorMessage != string.Empty)
+                    {
+                        errorMessage += System.Environment.NewLine;
+                    }
+
+                    errorMessage += "  تکرار رمز عبور اشتباه می باشد !  ";
+                }
+            }
+
+            if (errorMessage != string.Empty)
+            {
+                System.Windows.Forms.MessageBox.Show(errorMessage);
+
+                oldPasswordTextBox.Focus();
+
+                return;
+            }
+
             Models.DatabaseContext databaseContext = null;
 
             try
@@ -50,32 +111,25 @@ namespace BeautySalon
                     System.Windows.Forms.Application.Exit();
                 }
 
-                if ((string.Compare(
-                    currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0) 
-                    && string.IsNullOrWhiteSpace(oldPasswordTextBox.Text))
+                if (string.Compare(
+                    currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
                 {
-                    System.Windows.Forms.MessageBox.Show(" ! پسوورد قدیمی اشتباه می باشد  ");
+                    System.Windows.Forms.MessageBox.Show("  پسوورد قدیمی اشتباه می باشد ! ");
                     oldPasswordTextBox.Focus();
                     return;
                 }
 
-                if (string.Compare(
-                    currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) == 0)
-                {
-                    if (string.Compare(
-                        newPasswordTextBox.Text, passwordConfirmTextBox.Text, ignoreCase: false) != 0
-                        && string.IsNullOrWhiteSpace(newPasswordTextBox.Text))
-                    {
-                        System.Windows.Forms.MessageBox.Show(" تکرار رمز جدید صحیح نمی باشد ! ");
-                    }
+                currentUser.Password = newPasswordTextBox.Text;
 
-                    currentUser.Password = newPasswordTextBox.Text;
-                    databaseContext.SaveChanges();
+                databaseContext.SaveChanges();
 
-                    System.Windows.Forms.MessageBox.Show(" رمز شما با موفقیت تغییر یافت ! ");
-                    return;
-                }
+                System.Windows.Forms.MessageBox.Show(" رمز شما با موفقیت تغییر یافت ! ");
+
+                ResetForm();
+
+                return;
             }
+
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show($" Error : {ex.Message}");

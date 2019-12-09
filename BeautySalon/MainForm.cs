@@ -16,9 +16,9 @@ namespace BeautySalon
         {
             InitializeComponent();
         }
-
+        
         private ChangePassword changePassword;
-
+        // کلیک بر گزینه تغییر رمز عبور 
         private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if ((changePassword == null) || (changePassword.IsDisposed))
@@ -31,6 +31,7 @@ namespace BeautySalon
             }
         }
 
+        // کلیک بر گزینه خروج از سیستم 
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(
@@ -49,6 +50,7 @@ namespace BeautySalon
             }
         }
 
+        //کلیک بر گزینه خروج
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(
@@ -65,11 +67,13 @@ namespace BeautySalon
             }
         }
 
+        // نمایش فرم اصلی 
         private void MainForm_Load(object sender, EventArgs e)
         {
             ResetForm();
         }
 
+        // دستور ریست فرم
         public void ResetForm()
         {
             adminToolStripMenuItem.Visible =
@@ -77,8 +81,8 @@ namespace BeautySalon
 
             string userDisplayName = Infrastructure.Utility.AuthenticatedUser.FamilyName;
 
-            mainStatusStrip.Text = 
-                $" { userDisplayName } عزیز خوش آمدید! ";
+            mainToolStripStatusLabel.Text = $" { userDisplayName } عزیز خوش آمدید! " ;
+                
         }
     }
 }

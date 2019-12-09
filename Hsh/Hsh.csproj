@@ -66,6 +66,12 @@
     <Compile Include="Windows\Forms\CheckBox.Designer.cs">
       <DependentUpon>CheckBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Forms\GroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GroupBox.Designer.cs">
+      <DependentUpon>GroupBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Forms\Label.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -88,6 +94,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Windows\Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\GroupBox.resx">
+      <DependentUpon>GroupBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

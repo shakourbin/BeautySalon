@@ -16,5 +16,10 @@ namespace BeautySalon.Admin
         {
             InitializeComponent();
         }
+
+        public void ResetForm()
+        {
+
+        }
     }
 }
