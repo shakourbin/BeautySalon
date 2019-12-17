@@ -37,7 +37,7 @@
             this.empTelephoneNumberLabel = new Hsh.Windows.Forms.Label();
             this.textBox6 = new Hsh.Windows.Forms.TextBox();
             this.empBirthDateLabel = new Hsh.Windows.Forms.Label();
-            this.empIdentificationTextBox = new Hsh.Windows.Forms.TextBox();
+            this.empIdentityCodeTextBox = new Hsh.Windows.Forms.TextBox();
             this.empIdentificationCodeLabel = new Hsh.Windows.Forms.Label();
             this.empFamilyNameTextBox = new Hsh.Windows.Forms.TextBox();
             this.empFamilyNameTabel = new Hsh.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.empInfoGroupBox.Controls.Add(this.empTelephoneNumberLabel);
             this.empInfoGroupBox.Controls.Add(this.textBox6);
             this.empInfoGroupBox.Controls.Add(this.empBirthDateLabel);
-            this.empInfoGroupBox.Controls.Add(this.empIdentificationTextBox);
+            this.empInfoGroupBox.Controls.Add(this.empIdentityCodeTextBox);
             this.empInfoGroupBox.Controls.Add(this.empIdentificationCodeLabel);
             this.empInfoGroupBox.Controls.Add(this.empFamilyNameTextBox);
             this.empInfoGroupBox.Controls.Add(this.empFamilyNameTabel);
@@ -119,7 +119,7 @@
             // 
             this.empTelephoenumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.empTelephoenumberTextBox.Location = new System.Drawing.Point(15, 71);
+            this.empTelephoenumberTextBox.Location = new System.Drawing.Point(15, 66);
             this.empTelephoenumberTextBox.Name = "empTelephoenumberTextBox";
             this.empTelephoenumberTextBox.Size = new System.Drawing.Size(157, 20);
             this.empTelephoenumberTextBox.TabIndex = 13;
@@ -128,7 +128,7 @@
             // 
             this.empTelephoneNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empTelephoneNumberLabel.AutoSize = true;
-            this.empTelephoneNumberLabel.Location = new System.Drawing.Point(178, 74);
+            this.empTelephoneNumberLabel.Location = new System.Drawing.Point(178, 69);
             this.empTelephoneNumberLabel.Name = "empTelephoneNumberLabel";
             this.empTelephoneNumberLabel.Size = new System.Drawing.Size(68, 13);
             this.empTelephoneNumberLabel.TabIndex = 12;
@@ -137,7 +137,7 @@
             // textBox6
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(271, 68);
+            this.textBox6.Location = new System.Drawing.Point(271, 63);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(152, 20);
             this.textBox6.TabIndex = 11;
@@ -146,25 +146,25 @@
             // 
             this.empBirthDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empBirthDateLabel.AutoSize = true;
-            this.empBirthDateLabel.Location = new System.Drawing.Point(429, 71);
+            this.empBirthDateLabel.Location = new System.Drawing.Point(429, 66);
             this.empBirthDateLabel.Name = "empBirthDateLabel";
             this.empBirthDateLabel.Size = new System.Drawing.Size(62, 13);
             this.empBirthDateLabel.TabIndex = 10;
             this.empBirthDateLabel.Text = "تاریخ تولد : ";
             // 
-            // empIdentificationTextBox
+            // empIdentityCodeTextBox
             // 
-            this.empIdentificationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.empIdentificationTextBox.Location = new System.Drawing.Point(503, 67);
-            this.empIdentificationTextBox.Name = "empIdentificationTextBox";
-            this.empIdentificationTextBox.Size = new System.Drawing.Size(152, 20);
-            this.empIdentificationTextBox.TabIndex = 9;
+            this.empIdentityCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.empIdentityCodeTextBox.Location = new System.Drawing.Point(503, 62);
+            this.empIdentityCodeTextBox.Name = "empIdentityCodeTextBox";
+            this.empIdentityCodeTextBox.Size = new System.Drawing.Size(152, 20);
+            this.empIdentityCodeTextBox.TabIndex = 9;
             // 
             // empIdentificationCodeLabel
             // 
             this.empIdentificationCodeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empIdentificationCodeLabel.AutoSize = true;
-            this.empIdentificationCodeLabel.Location = new System.Drawing.Point(661, 71);
+            this.empIdentificationCodeLabel.Location = new System.Drawing.Point(661, 66);
             this.empIdentificationCodeLabel.Name = "empIdentificationCodeLabel";
             this.empIdentificationCodeLabel.Size = new System.Drawing.Size(63, 13);
             this.empIdentificationCodeLabel.TabIndex = 8;
@@ -233,6 +233,7 @@
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "ثبت ";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // resetButton
             // 
@@ -242,6 +243,7 @@
             this.resetButton.TabIndex = 2;
             this.resetButton.Text = "انصراف";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // EmployeeRegisterForm
             // 
@@ -252,8 +254,10 @@
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.empInfoGroupBox);
+            this.MinimumSize = new System.Drawing.Size(786, 306);
             this.Name = "EmployeeRegisterForm";
-            this.Text = "فرم ثبت نام کارمند";
+            this.Text = "فرم ثبت نام کارمندان";
+            this.Load += new System.EventHandler(this.EmployeeRegisterForm_Load);
             this.empInfoGroupBox.ResumeLayout(false);
             this.empInfoGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -275,7 +279,7 @@
         private Hsh.Windows.Forms.Label empTelephoneNumberLabel;
         private Hsh.Windows.Forms.TextBox textBox6;
         private Hsh.Windows.Forms.Label empBirthDateLabel;
-        private Hsh.Windows.Forms.TextBox empIdentificationTextBox;
+        private Hsh.Windows.Forms.TextBox empIdentityCodeTextBox;
         private Hsh.Windows.Forms.Label empIdentificationCodeLabel;
         private Hsh.Windows.Forms.TextBox empAddressTextBox;
         private Hsh.Windows.Forms.Label empAddressLabel;

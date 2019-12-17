@@ -19,5 +19,6 @@ namespace BeautySalon.Models
         }
 
         public System.Data.Entity.DbSet<User> Users { get; set; }
+        public System.Data.Entity.DbSet<Employee> Employees { get; set; }
     }
 }
