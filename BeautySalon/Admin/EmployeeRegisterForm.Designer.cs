@@ -33,11 +33,11 @@
             this.empAddressLabel = new Hsh.Windows.Forms.Label();
             this.empMobileNumberTextBox = new Hsh.Windows.Forms.TextBox();
             this.empMobileNumberLabel = new Hsh.Windows.Forms.Label();
-            this.empTelephoenumberTextBox = new Hsh.Windows.Forms.TextBox();
+            this.empPhoneNumberTextBox = new Hsh.Windows.Forms.TextBox();
             this.empTelephoneNumberLabel = new Hsh.Windows.Forms.Label();
             this.textBox6 = new Hsh.Windows.Forms.TextBox();
             this.empBirthDateLabel = new Hsh.Windows.Forms.Label();
-            this.empIdentityCodeTextBox = new Hsh.Windows.Forms.TextBox();
+            this.empNationalCodeTextBox = new Hsh.Windows.Forms.TextBox();
             this.empIdentificationCodeLabel = new Hsh.Windows.Forms.Label();
             this.empFamilyNameTextBox = new Hsh.Windows.Forms.TextBox();
             this.empFamilyNameTabel = new Hsh.Windows.Forms.Label();
@@ -59,11 +59,11 @@
             this.empInfoGroupBox.Controls.Add(this.empAddressLabel);
             this.empInfoGroupBox.Controls.Add(this.empMobileNumberTextBox);
             this.empInfoGroupBox.Controls.Add(this.empMobileNumberLabel);
-            this.empInfoGroupBox.Controls.Add(this.empTelephoenumberTextBox);
+            this.empInfoGroupBox.Controls.Add(this.empPhoneNumberTextBox);
             this.empInfoGroupBox.Controls.Add(this.empTelephoneNumberLabel);
             this.empInfoGroupBox.Controls.Add(this.textBox6);
             this.empInfoGroupBox.Controls.Add(this.empBirthDateLabel);
-            this.empInfoGroupBox.Controls.Add(this.empIdentityCodeTextBox);
+            this.empInfoGroupBox.Controls.Add(this.empNationalCodeTextBox);
             this.empInfoGroupBox.Controls.Add(this.empIdentificationCodeLabel);
             this.empInfoGroupBox.Controls.Add(this.empFamilyNameTextBox);
             this.empInfoGroupBox.Controls.Add(this.empFamilyNameTabel);
@@ -115,14 +115,14 @@
             this.empMobileNumberLabel.TabIndex = 14;
             this.empMobileNumberLabel.Text = "شماره همراه : ";
             // 
-            // empTelephoenumberTextBox
+            // empPhoneNumberTextBox
             // 
-            this.empTelephoenumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.empPhoneNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.empTelephoenumberTextBox.Location = new System.Drawing.Point(15, 66);
-            this.empTelephoenumberTextBox.Name = "empTelephoenumberTextBox";
-            this.empTelephoenumberTextBox.Size = new System.Drawing.Size(157, 20);
-            this.empTelephoenumberTextBox.TabIndex = 13;
+            this.empPhoneNumberTextBox.Location = new System.Drawing.Point(15, 66);
+            this.empPhoneNumberTextBox.Name = "empPhoneNumberTextBox";
+            this.empPhoneNumberTextBox.Size = new System.Drawing.Size(157, 20);
+            this.empPhoneNumberTextBox.TabIndex = 13;
             // 
             // empTelephoneNumberLabel
             // 
@@ -152,13 +152,13 @@
             this.empBirthDateLabel.TabIndex = 10;
             this.empBirthDateLabel.Text = "تاریخ تولد : ";
             // 
-            // empIdentityCodeTextBox
+            // empNationalCodeTextBox
             // 
-            this.empIdentityCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.empIdentityCodeTextBox.Location = new System.Drawing.Point(503, 62);
-            this.empIdentityCodeTextBox.Name = "empIdentityCodeTextBox";
-            this.empIdentityCodeTextBox.Size = new System.Drawing.Size(152, 20);
-            this.empIdentityCodeTextBox.TabIndex = 9;
+            this.empNationalCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.empNationalCodeTextBox.Location = new System.Drawing.Point(503, 62);
+            this.empNationalCodeTextBox.Name = "empNationalCodeTextBox";
+            this.empNationalCodeTextBox.Size = new System.Drawing.Size(152, 20);
+            this.empNationalCodeTextBox.TabIndex = 9;
             // 
             // empIdentificationCodeLabel
             // 
@@ -275,11 +275,11 @@
         private Hsh.Windows.Forms.Label empCodeLabel;
         private Hsh.Windows.Forms.TextBox empMobileNumberTextBox;
         private Hsh.Windows.Forms.Label empMobileNumberLabel;
-        private Hsh.Windows.Forms.TextBox empTelephoenumberTextBox;
+        private Hsh.Windows.Forms.TextBox empPhoneNumberTextBox;
         private Hsh.Windows.Forms.Label empTelephoneNumberLabel;
         private Hsh.Windows.Forms.TextBox textBox6;
         private Hsh.Windows.Forms.Label empBirthDateLabel;
-        private Hsh.Windows.Forms.TextBox empIdentityCodeTextBox;
+        private Hsh.Windows.Forms.TextBox empNationalCodeTextBox;
         private Hsh.Windows.Forms.Label empIdentificationCodeLabel;
         private Hsh.Windows.Forms.TextBox empAddressTextBox;
         private Hsh.Windows.Forms.Label empAddressLabel;

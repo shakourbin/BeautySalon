@@ -67,5 +67,18 @@ namespace BeautySalon.Infrastructure
             }
         }
 
+        private static BeautySalon.Admin.EmployeeRegisterForm employeeRegisterForm;
+        public static BeautySalon.Admin.EmployeeRegisterForm EmployeeRegisterForm
+        {
+            get
+            {
+                if (employeeRegisterForm == null)
+                {
+                    employeeRegisterForm = new Admin.EmployeeRegisterForm();
+                }
+                return employeeRegisterForm;
+            }
+        }
+
     }
 }

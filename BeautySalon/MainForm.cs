@@ -84,5 +84,23 @@ namespace BeautySalon
             mainToolStripStatusLabel.Text = $" { userDisplayName } عزیز خوش آمدید! " ;
                 
         }
+
+        private Admin.EmployeeRegisterForm employeeRegisterForm;
+        private void NewEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((employeeRegisterForm == null)||(employeeRegisterForm.IsDisposed))
+            {
+                employeeRegisterForm = new Admin.EmployeeRegisterForm
+                {
+                    MdiParent = this,
+                };
+                employeeRegisterForm.Show();
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

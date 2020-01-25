@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new Hsh.Windows.Forms.MenuStrip(this.components);
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.بهروزرسانیپروفایلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateProfileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,9 +56,18 @@
             // 
             // adminToolStripMenuItem
             // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newEmployeeToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.adminToolStripMenuItem.Text = "مدیریت";
+            // 
+            // newEmployeeToolStripMenuItem
+            // 
+            this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.newEmployeeToolStripMenuItem.Text = "ثبت کارمند جدید ";
+            this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.NewEmployeeToolStripMenuItem_Click);
             // 
             // بهروزرسانیپروفایلToolStripMenuItem
             // 
@@ -123,6 +133,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "خانه";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -144,6 +155,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.StatusStrip mainStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel mainToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripMenuItem newEmployeeToolStripMenuItem;
     }
 }
 
